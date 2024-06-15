@@ -7,7 +7,7 @@ library(grid)
 cultivares <- rep(1:5, each = 5)
 locais <- rep(1:5, times = 5)
 medias <- c(95, 86, 73, 97, 83, 71, 59, 77, 95, 85, 68, 91, 82, 85, 64, 72, 81, 65, 81, 98, 75, 66, 71, 65, 63)
-dados <- data.frame(cultivares, locais, medias)
+dados <- data.frame(cultivares, locais, medias) 
 
 #------------------------------------------------------------#
 # Modelo Misto - Intercepto aleatório e inclinação fixa
