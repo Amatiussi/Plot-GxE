@@ -18,7 +18,7 @@ inclinacao = fixef(M1)["locais"]
 
 plot1=ggplot(dados, aes(locais, medias, color=cultivares)) +
   geom_point(aes(color=factor(cultivares)), size=0.7, show.legend=F) +
-  geom_line(aes(y=predict(M1), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +
+  geom_line(aes(y=predict(M1), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +    # Plot A
   geom_abline(intercept=intercepto, slope=inclinacao, color="black", linetype="solid", size=0.7) +
   labs(x="Plot A", y="", title="Random intercept and fixed slope") +
   theme(plot.title=element_text(size=10)) +
@@ -32,7 +32,7 @@ inclinacao = fixef(M2)["locais"]
 
 plot2=ggplot(dados, aes(locais, medias, color=cultivares)) +
   geom_point(aes(color=factor(cultivares)), size=0.7, show.legend=F) +
-  geom_line(aes(y=predict(M2), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +
+  geom_line(aes(y=predict(M2), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +    # Plot B
   geom_abline(intercept=intercepto, slope=inclinacao, color="black", linetype="solid", size=0.7) +
   labs(x="Plot B", y="", title="Random intercept and random slope") +
   theme(plot.title=element_text(size=10)) +
@@ -47,7 +47,7 @@ inclinacao = fixef(M3)["locais"]
 
 plot3=ggplot(dados, aes(locais, medias, color=cultivares)) +
   geom_point(aes(color=factor(cultivares)), size=0.7, show.legend=F) +
-  geom_line(aes(y=predict(M3), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +
+  geom_line(aes(y=predict(M3), group=cultivares, color=factor(cultivares)), size=0.7, show.legend=F) +     # Plot C
   geom_abline(intercept=intercepto, slope=inclinacao, color="black", linetype="solid", size=0.7) +
   labs(x="Plot C", y="", title="Fixed intercept and random slope") +
   theme(plot.title=element_text(size=10)) +
